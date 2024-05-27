@@ -1,0 +1,34 @@
+{% extends 'movies/_base.html' %}
+<html>
+  <!-- <style>
+    body {
+      text-align: center;
+      background-color: black;
+      color: white;
+    }
+  </style> -->
+  <body >
+    {% block content %}
+    <h1>Contact me on: ......................</h1>
+    {% if media %}
+    <ol>
+      {% for i in media %}
+      <li>{{i|title}}</li>
+      {% endfor %}
+    </ol>
+
+    {% else %}
+    <h1>0556387440</h1>
+
+    {% endif %}
+
+    <h1>my Image</h1>
+    {% load static %}
+    <img
+      style="width: 100px;"
+      src="{% static 'movies/programmer-flat-vector-character-software-260nw-1511378768.webp'%}"
+      alt=""
+    />
+    {% endblock %}
+  </body>
+</html>
